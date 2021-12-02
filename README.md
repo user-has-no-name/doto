@@ -1,5 +1,7 @@
 ### The App
 
+<img src="images/logo.png" width="200" height="200"> 
+
 Minimalistic, simple to - do app that allows to keep your tasks.
 
 ### 💻 Requirements
