@@ -11,6 +11,10 @@ No dependencies in this projects, so all you need to run is:
 
 ### 📱 Preview
 
-| _                          | _                          | _                          | _                             |
-| ![](images/mainView.png)   | ![](images/addView.png)    | ![](images/delete.png)     | ![](images/sortAndSearch.png) |
+<img src="images/mainView.png" width="285" height="448"> <img src="images/addView.png" width="285" height="448"> 
+
+<img src="images/delete.png" width="285" height="448"> <img src="images/sortAndSearch.png" width="285" height="448">
+
+
+
 
