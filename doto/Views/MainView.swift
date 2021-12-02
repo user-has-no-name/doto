@@ -1,6 +1,6 @@
 //
 //  MainView.swift
-//  doto
+//  Doto
 //
 //  Created by Oleksandr Zavazhenko on 30/11/2021.
 //
@@ -14,7 +14,6 @@ struct MainView: View {
   @State private var selectedCategory: Categories = .all
   @State private var showSearchBar = false
   @AppStorage("isDarkMode") private var isDarkMode = false
-
 
   var body: some View {
 
@@ -39,7 +38,6 @@ struct MainView: View {
       }
 
       .toolbar {
-
 
         ToolbarItem(placement: .navigationBarLeading) {
           navigationBarLeadingButton
@@ -87,7 +85,6 @@ var navigationBarTrailingItem: some View {
     }
   } label: {
     Image(systemName: "magnifyingglass")
-      .background(Color.orange)
       .foregroundColor(.orange)
   }
 }
@@ -136,7 +133,6 @@ var navigationBarLeadingButton: some View {
 }
 }
 
-
 /// A view that displays the list with tasks
 struct ListView: View {
 
@@ -145,21 +141,28 @@ struct ListView: View {
   @State var offsets: IndexSet?
   var selectedCategory: Categories
 
-  var body: some View  {
+  var body: some View {
 
     List {
       ForEach(Array(taskViewModel.filteredTasks.enumerated()), id: \.element) { index, element in
         ListRow(task: element,
                 taskIndex: IndexSet(integer: index))
           .environmentObject(taskViewModel)
+          .contextMenu {
+            Button {
+              delete(at: IndexSet(integer: index))
+            } label: {
+              Label("Usuń zadanie", systemImage: "trash")
+            }
+          }
       }
-      .onDelete(perform: delete)
-      .alert(isPresented: $taskViewModel.confirmationAction){
+      .onDelete(perform: delete) // works with a weird animation 
+      .alert(isPresented: $taskViewModel.confirmationAction) {
         // if user allows to delete, then it removes from CoreData
         Alert(title: Text(taskViewModel.activeAlert?.rawValue ?? ""),
               primaryButton: .destructive(Text("Usuń")) {
 
-          if let offsets = self.offsets{
+          if let offsets = self.offsets {
 
               taskViewModel.deleteTask(indexSet: offsets)
 
@@ -176,7 +179,6 @@ struct ListView: View {
       taskViewModel.showAlert(reason: .askForDelete)
     }
     // showing an alert to ask user permission to delete
-
 
     self.offsets = offsets
   }
@@ -204,7 +206,6 @@ struct ListRow: View {
         }
 
       VStack(spacing: 0) {
-
 
         // Horizontal stack with a title
         HStack {
