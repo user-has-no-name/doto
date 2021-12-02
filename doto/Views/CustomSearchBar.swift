@@ -1,6 +1,6 @@
 //
 //  CustomSearchBar.swift
-//  doto
+//  Doto
 //
 //  Created by Oleksandr Zavazhenko on 01/12/2021.
 //

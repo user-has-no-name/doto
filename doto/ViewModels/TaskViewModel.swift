@@ -1,6 +1,6 @@
 //
 //  TaskViewModel.swift
-//  doto
+//  Doto
 //
 //  Created by Oleksandr Zavazhenko on 30/11/2021.
 //
@@ -9,7 +9,6 @@ import Foundation
 import CoreData
 import SwiftUI
 import Combine
-
 
 protocol TaskProtocol {
 
@@ -33,7 +32,6 @@ enum Categories: String, Equatable, CaseIterable {
 
 }
 
-
 enum Alerts: String, CustomStringConvertible {
 
   // titles for alerts and confirmation dialogs
@@ -54,7 +52,6 @@ enum Alerts: String, CustomStringConvertible {
     }
   }
 }
-
 
 class TaskViewModel: ObservableObject, TaskProtocol {
 
@@ -90,7 +87,7 @@ class TaskViewModel: ObservableObject, TaskProtocol {
     persistentContainer = NSPersistentContainer(name: "DataModel")
 
     // Trying to load data from container
-    persistentContainer.loadPersistentStores { description, error in
+    persistentContainer.loadPersistentStores { _, error in
 
       if let error = error {
         // If there are any errors - just prints it out into the console (not the best idea)
@@ -132,14 +129,13 @@ class TaskViewModel: ObservableObject, TaskProtocol {
 
     $selectedCategory.removeDuplicates()
       .combineLatest($searchQuery)
-      .sink { [weak self] (category, str) in
+      .sink { [weak self] (category, _) in
         self?.getFilteredTasks(category: category)
       }
       .store(in: &searchCancellable)
 
     getAllTasks()
   }
-
 
   /// Adds task to the CoreData
   func addTask(title: String, category: Categories, dateOfCompletion: Date) {
@@ -159,7 +155,6 @@ class TaskViewModel: ObservableObject, TaskProtocol {
     saveChanges()
   }
 
-
   func accomplishTask(indexSet: IndexSet) {
 
     deleteTask(indexSet: indexSet)
@@ -173,7 +168,7 @@ class TaskViewModel: ObservableObject, TaskProtocol {
 
 //    showAlert(reason: .askForDelete)
     // getting task from an array
-    
+
     let task = allTasks[indexSet.first!]
 
     // deletes task from CoreData
@@ -203,7 +198,7 @@ class TaskViewModel: ObservableObject, TaskProtocol {
     } catch {
       persistentContainer.viewContext.rollback()
     }
-    
+
   }
 
   /// Fetchs all tasks from CoreData

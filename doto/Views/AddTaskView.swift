@@ -1,6 +1,6 @@
 //
 //  AddTaskView.swift
-//  doto
+//  Doto
 //
 //  Created by Oleksandr Zavazhenko on 01/12/2021.
 //
@@ -53,7 +53,7 @@ struct AddTaskView: View {
           Text("Data ⏰")
         }.foregroundColor(.orange)
       }
-      
+
         .toolbar {
 
           ToolbarItem(placement: .principal, content: {
@@ -62,7 +62,7 @@ struct AddTaskView: View {
           })
 
           ToolbarItem(placement: .navigationBarLeading) {
-            Button ("Anuluj") {
+            Button("Anuluj") {
               presentationMode.wrappedValue.dismiss()
             }
             .foregroundColor(.orange)
@@ -71,7 +71,7 @@ struct AddTaskView: View {
           }
 
           ToolbarItem(placement: .navigationBarTrailing) {
-            Button ("Dodaj") {
+            Button("Dodaj") {
 
               if taskViewModel.validateTask(title: title) {
 

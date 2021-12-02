@@ -11,7 +11,7 @@
 		1F69A6A827572A1000DABBEC /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F69A6A727572A1000DABBEC /* CustomSearchBar.swift */; };
 		1FB5686327574977001ACBC1 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5686227574977001ACBC1 /* ViewExtensions.swift */; };
 		1FE07EF72758F8A600503BD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FE07EF62758F8A600503BD3 /* LaunchScreen.storyboard */; };
-		1FF1AC6E27568FCD0004BD6B /* dotoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF1AC6D27568FCD0004BD6B /* dotoApp.swift */; };
+		1FF1AC6E27568FCD0004BD6B /* DotoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF1AC6D27568FCD0004BD6B /* DotoApp.swift */; };
 		1FF1AC7227568FCF0004BD6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FF1AC7127568FCF0004BD6B /* Assets.xcassets */; };
 		1FF1AC7527568FCF0004BD6B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FF1AC7427568FCF0004BD6B /* Preview Assets.xcassets */; };
 		1FF1AC80275690160004BD6B /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FF1AC7E275690160004BD6B /* DataModel.xcdatamodeld */; };
@@ -25,7 +25,7 @@
 		1FB5686227574977001ACBC1 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		1FE07EF62758F8A600503BD3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FF1AC6A27568FCD0004BD6B /* Doto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doto.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FF1AC6D27568FCD0004BD6B /* dotoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dotoApp.swift; sourceTree = "<group>"; };
+		1FF1AC6D27568FCD0004BD6B /* DotoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotoApp.swift; sourceTree = "<group>"; };
 		1FF1AC7127568FCF0004BD6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FF1AC7427568FCF0004BD6B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1FF1AC7F275690160004BD6B /* TaskDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskDataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 		1FF1AC6C27568FCD0004BD6B /* doto */ = {
 			isa = PBXGroup;
 			children = (
-				1FF1AC6D27568FCD0004BD6B /* dotoApp.swift */,
+				1FF1AC6D27568FCD0004BD6B /* DotoApp.swift */,
 				1FF1AC86275690770004BD6B /* Views */,
 				1FF1AC812756902B0004BD6B /* ViewModels */,
 				1FF1AC7D275690160004BD6B /* Models */,
@@ -119,6 +119,7 @@
 				1FF1AC6627568FCD0004BD6B /* Sources */,
 				1FF1AC6727568FCD0004BD6B /* Frameworks */,
 				1FF1AC6827568FCD0004BD6B /* Resources */,
+				1F145B422759039500EA4CA8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -180,6 +181,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1F145B422759039500EA4CA8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nexport PATH\n\nif which swiftlint >/dev/null; then\n    swiftlint autocorrect && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1FF1AC6627568FCD0004BD6B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -191,7 +212,7 @@
 				1F69A6A827572A1000DABBEC /* CustomSearchBar.swift in Sources */,
 				1FF1AC83275690480004BD6B /* TaskViewModel.swift in Sources */,
 				1FF1AC88275690870004BD6B /* MainView.swift in Sources */,
-				1FF1AC6E27568FCD0004BD6B /* dotoApp.swift in Sources */,
+				1FF1AC6E27568FCD0004BD6B /* DotoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
