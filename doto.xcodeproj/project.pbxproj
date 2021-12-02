@@ -7,18 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F3F998727571D6B00AB29EE /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3F998627571D6B00AB29EE /* AddTaskView.swift */; };
+		1F69A6A827572A1000DABBEC /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F69A6A727572A1000DABBEC /* CustomSearchBar.swift */; };
+		1FB5686327574977001ACBC1 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5686227574977001ACBC1 /* ViewExtensions.swift */; };
+		1FE07EF72758F8A600503BD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FE07EF62758F8A600503BD3 /* LaunchScreen.storyboard */; };
 		1FF1AC6E27568FCD0004BD6B /* dotoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF1AC6D27568FCD0004BD6B /* dotoApp.swift */; };
-		1FF1AC7027568FCD0004BD6B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF1AC6F27568FCD0004BD6B /* ContentView.swift */; };
 		1FF1AC7227568FCF0004BD6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FF1AC7127568FCF0004BD6B /* Assets.xcassets */; };
 		1FF1AC7527568FCF0004BD6B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FF1AC7427568FCF0004BD6B /* Preview Assets.xcassets */; };
+		1FF1AC80275690160004BD6B /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FF1AC7E275690160004BD6B /* DataModel.xcdatamodeld */; };
+		1FF1AC83275690480004BD6B /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF1AC82275690480004BD6B /* TaskViewModel.swift */; };
+		1FF1AC88275690870004BD6B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF1AC87275690870004BD6B /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1FF1AC6A27568FCD0004BD6B /* doto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = doto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F3F998627571D6B00AB29EE /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
+		1F69A6A727572A1000DABBEC /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
+		1FB5686227574977001ACBC1 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		1FE07EF62758F8A600503BD3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1FF1AC6A27568FCD0004BD6B /* Doto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF1AC6D27568FCD0004BD6B /* dotoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dotoApp.swift; sourceTree = "<group>"; };
-		1FF1AC6F27568FCD0004BD6B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1FF1AC7127568FCF0004BD6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FF1AC7427568FCF0004BD6B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1FF1AC7F275690160004BD6B /* TaskDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskDataModel.xcdatamodel; sourceTree = "<group>"; };
+		1FF1AC82275690480004BD6B /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		1FF1AC87275690870004BD6B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +47,7 @@
 		1FF1AC6127568FCD0004BD6B = {
 			isa = PBXGroup;
 			children = (
+				1FE07EF62758F8A600503BD3 /* LaunchScreen.storyboard */,
 				1FF1AC6C27568FCD0004BD6B /* doto */,
 				1FF1AC6B27568FCD0004BD6B /* Products */,
 			);
@@ -43,7 +56,7 @@
 		1FF1AC6B27568FCD0004BD6B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1FF1AC6A27568FCD0004BD6B /* doto.app */,
+				1FF1AC6A27568FCD0004BD6B /* Doto.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,7 +65,9 @@
 			isa = PBXGroup;
 			children = (
 				1FF1AC6D27568FCD0004BD6B /* dotoApp.swift */,
-				1FF1AC6F27568FCD0004BD6B /* ContentView.swift */,
+				1FF1AC86275690770004BD6B /* Views */,
+				1FF1AC812756902B0004BD6B /* ViewModels */,
+				1FF1AC7D275690160004BD6B /* Models */,
 				1FF1AC7127568FCF0004BD6B /* Assets.xcassets */,
 				1FF1AC7327568FCF0004BD6B /* Preview Content */,
 			);
@@ -65,6 +80,33 @@
 				1FF1AC7427568FCF0004BD6B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1FF1AC7D275690160004BD6B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1FF1AC7E275690160004BD6B /* DataModel.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1FF1AC812756902B0004BD6B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1FF1AC82275690480004BD6B /* TaskViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1FF1AC86275690770004BD6B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1FF1AC87275690870004BD6B /* MainView.swift */,
+				1F3F998627571D6B00AB29EE /* AddTaskView.swift */,
+				1F69A6A727572A1000DABBEC /* CustomSearchBar.swift */,
+				1FB5686227574977001ACBC1 /* ViewExtensions.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,8 +125,10 @@
 			dependencies = (
 			);
 			name = doto;
+			packageProductDependencies = (
+			);
 			productName = doto;
-			productReference = 1FF1AC6A27568FCD0004BD6B /* doto.app */;
+			productReference = 1FF1AC6A27568FCD0004BD6B /* Doto.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -104,13 +148,16 @@
 			};
 			buildConfigurationList = 1FF1AC6527568FCD0004BD6B /* Build configuration list for PBXProject "doto" */;
 			compatibilityVersion = "Xcode 13.0";
-			developmentRegion = en;
+			developmentRegion = pl;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				pl,
 			);
 			mainGroup = 1FF1AC6127568FCD0004BD6B;
+			packageReferences = (
+			);
 			productRefGroup = 1FF1AC6B27568FCD0004BD6B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +172,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FE07EF72758F8A600503BD3 /* LaunchScreen.storyboard in Resources */,
 				1FF1AC7527568FCF0004BD6B /* Preview Assets.xcassets in Resources */,
 				1FF1AC7227568FCF0004BD6B /* Assets.xcassets in Resources */,
 			);
@@ -137,7 +185,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FF1AC7027568FCD0004BD6B /* ContentView.swift in Sources */,
+				1FF1AC80275690160004BD6B /* DataModel.xcdatamodeld in Sources */,
+				1FB5686327574977001ACBC1 /* ViewExtensions.swift in Sources */,
+				1F3F998727571D6B00AB29EE /* AddTaskView.swift in Sources */,
+				1F69A6A827572A1000DABBEC /* CustomSearchBar.swift in Sources */,
+				1FF1AC83275690480004BD6B /* TaskViewModel.swift in Sources */,
+				1FF1AC88275690870004BD6B /* MainView.swift in Sources */,
 				1FF1AC6E27568FCD0004BD6B /* dotoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,7 +249,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -251,7 +304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -275,6 +328,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -283,10 +338,10 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.olza.doto;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Doto;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,6 +359,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -312,10 +369,10 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.olza.doto;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Doto;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -341,6 +398,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1FF1AC7E275690160004BD6B /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1FF1AC7F275690160004BD6B /* TaskDataModel.xcdatamodel */,
+			);
+			currentVersion = 1FF1AC7F275690160004BD6B /* TaskDataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1FF1AC6227568FCD0004BD6B /* Project object */;
 }
